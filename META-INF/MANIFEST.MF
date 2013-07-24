@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Current Time Plugin
+Bundle-SymbolicName: org.ambientdynamix.contextplugins.currenttime
+Bundle-Version: 1.0.0
+Export-Package: org.ambientdynamix.contextplugins.currenttime
+Import-Package: org.ambientdynamix.api.application,
+ org.ambientdynamix.api.contextplugin,
+ org.ambientdynamix.api.contextplugin.security
+DynamicImport-Package: *
