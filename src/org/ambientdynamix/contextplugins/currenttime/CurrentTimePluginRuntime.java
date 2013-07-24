@@ -72,6 +72,7 @@ public class CurrentTimePluginRuntime extends AutoReactiveContextPluginRuntime
 	@Override
 	public void init(PowerScheme arg0, ContextPluginSettings arg1) throws Exception 
 	{
+		Log.d(TAG, "init");
 		context=this;
 		// TODO Auto-generated method stub
 		
