@@ -9,10 +9,13 @@ import org.ambientdynamix.contextplugins.context.info.environment.ICurrentTimeCo
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
 
 public class CurrentTimeContextInfo implements IContextInfo, ICurrentTimeContextInfo
 {
 
+	private final String TAG = "TIMEPLUGIN";
+	
 	int year;
 	int month;
 	int dayofthemonth;
@@ -36,6 +39,7 @@ public class CurrentTimeContextInfo implements IContextInfo, ICurrentTimeContext
 		
 	CurrentTimeContextInfo()
 	{
+		Log.d(TAG, "create Current Time");
 		Date d = new Date();
 		year=d.getYear()+1900;
 		month=d.getMonth();

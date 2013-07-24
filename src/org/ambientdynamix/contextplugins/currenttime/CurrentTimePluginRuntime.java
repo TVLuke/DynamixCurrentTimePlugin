@@ -14,7 +14,7 @@ import android.util.Log;
 
 public class CurrentTimePluginRuntime extends AutoReactiveContextPluginRuntime
 {
-	private final String TAG = "REDDOT";
+	private final String TAG = "TIMEPLUGIN";
 	private static CurrentTimePluginRuntime context;
 
 	@Override

@@ -6,6 +6,7 @@ import java.util.Date;
 import android.app.AlarmManager;
 import android.app.IntentService;
 import android.app.PendingIntent;
+import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -39,6 +40,13 @@ public class Timer extends IntentService {
 		Log.i(TAG, "onCreate");
 	}
 
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) 
+	{
+		super.onStartCommand(intent, flags, startId);
+		Log.i(TAG, "Received start id " + startId + ": " + intent);
+		return Service.START_NOT_STICKY;
+	}
 	
 	@Override
     public void onDestroy() 
