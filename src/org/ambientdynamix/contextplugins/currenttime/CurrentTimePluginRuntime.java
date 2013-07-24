@@ -16,6 +16,7 @@ public class CurrentTimePluginRuntime extends AutoReactiveContextPluginRuntime
 {
 	private final String TAG = "TIMEPLUGIN";
 	private static CurrentTimePluginRuntime context;
+	Timer timer;
 
 	@Override
 	public void start() 
@@ -24,7 +25,6 @@ public class CurrentTimePluginRuntime extends AutoReactiveContextPluginRuntime
 		 * Nothing to do, since this is a pull plug-in... we're now waiting for context scan requests.
 		 */
 		context=this;
-		this.getSecuredContext().startService(new Intent(getSecuredContext(), Timer.class));
 		Log.i(TAG, "Started!");
 	}
 
@@ -73,6 +73,7 @@ public class CurrentTimePluginRuntime extends AutoReactiveContextPluginRuntime
 	public void init(PowerScheme arg0, ContextPluginSettings arg1) throws Exception 
 	{
 		Log.d(TAG, "init");
+		timer=new Timer();
 		context=this;
 		// TODO Auto-generated method stub
 		
