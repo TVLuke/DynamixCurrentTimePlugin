@@ -6,8 +6,11 @@ import org.ambientdynamix.api.contextplugin.*;
 import org.ambientdynamix.api.contextplugin.security.PrivacyRiskLevel;
 import org.ambientdynamix.api.contextplugin.security.SecuredContextInfo;
 
+import android.bluetooth.BluetoothAdapter;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -74,6 +77,7 @@ public class CurrentTimePluginRuntime extends AutoReactiveContextPluginRuntime
 	{
 		Log.d(TAG, "init");
 		timer=new Timer();
+		
 		context=this;
 		// TODO Auto-generated method stub
 		

@@ -38,7 +38,7 @@ public class Timer {
 	class BackendRunner implements Runnable
 	{
 		private Handler handler = new Handler();
-		private int delay=1000;
+		private int delay=6000;
 		long counter=0;
 		
 		@Override

@@ -133,7 +133,7 @@ public class CurrentTimeContextInfo implements IContextInfo, ICurrentTimeContext
 		}
 		else if (format.equalsIgnoreCase("XML"))
 		{
-			return "";
+			return "<time><year>"+year+"</year></time>";
 		}
 		else if (format.equalsIgnoreCase("JSON"))
 		{
